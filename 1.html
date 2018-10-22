@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>facebook</title>
+		<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			section{
+				background-color: #5170AD;
+				width: 360px;
+				height: 380px;
+				margin: 10px auto;
+				border-radius: 2%;
+				
+			}
+			h1{
+				color: white;
+				text-align: center;
+			}
+			.light span{
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				margin-left: 8px;
+				background-color: yellow;/*设置颜色的同时可以设置透明度*/
+				cursor: pointer;
+				box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
+				}
+			.login-form input[type="email"]{
+				width: 260px;
+				position: absolute;
+				margin-left: 25px;
+				margin-top: 50px;
+				border: 1px solid #314d89;
+			  	padding: 12px 20px;/*这么神奇吗？*/
+			 	color: #afafaf;
+			  	font-weight: 400;
+			  	cursor: pointer;
+			  	outline: none;
+			  	border-radius: 4px 4px 0 0;
+				display: block;
+			  	
+	}
+	.login-form input[type="password"]{
+				width: 260px;
+				position: absolute;
+				margin-left: 25px;
+				border: 1px solid #314d89;
+			  	padding: 12px 20px;/*这么神奇吗？*/
+			 	color: #afafaf;
+			  	font-weight: 400;
+			  	cursor: pointer;
+			  	outline: none;
+			  	border-radius: 4px 4px 0 0;
+				margin-top: 120px;
+  				box-shadow: 0 -1px 0 #e0e0e0 inset, 0 1px 2px rgba(0, 0, 0, 0.23) inset;
+	}
+		
+		input[type="submit"]{
+				position: absolute;
+				left: 530px;
+				top: 240px;
+  				font-weight: 400;
+  				padding: 8px;
+ 			 font-size: 17px;
+ 			 width: 300px;
+  				
+	}
+		input[type="submit"]:hover{
+  				background: #DDD;
+			
+		}
+		.login-form input[type="submit"]:active {
+  			padding-top: 9px;
+  			padding-bottom: 7px;
+  			background: #C9C9C9}
+  		a{
+  			position: absolute;
+  			text-decoration: none;
+  			color: wheat;
+  			margin-left: 120px;
+  			margin-top: 280px;
+  		}
+		</style>
+	</head>
+	<body>
+		<section >
+			<div class="light">
+				<span></span>
+				<span></span>
+				<span></span>
+				
+			</div>
+			<h1>Facebook</h1>
+			<form action="post" method="post" class="login-form">
+			<label>
+				<!--required 属性表示必选项，是一个布尔值，如果不输入内容就提交，就会显示错误;-->
+				<input id="email" type="email" name="email" required placeholder="Email">
+			</label>
+			<label>
+				<input type="password" name="password" required placeholder="Password">
+			</label>
+			<input type="submit" value="Login">
+				
+			</form>
+			<h5><a href="#">Forgot password</a></h5>
+		</section>
+		<script>
+			var email=document.getElementById("email");
+			if(email.value)
+			
+		</script>
+	</body>
+</html>
