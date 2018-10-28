@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>I am blink！</title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				background-color: #000000;			
+			}		
+			#shine{
+			width: 600px;
+			height: 300px;
+			border: 3px solid darkblue;
+			margin: 100px auto;
+			color: white;
+			border-radius:15px ;
+	        box-shadow:0 0 100px #8A2BE2;
+			}
+			input{
+				display: block;
+				color: wheat;
+				padding: 2px;
+				font-weight: 500;
+			  	padding: 10px 35px;
+			  	margin: 30px 30px 10px 200px;
+				box-shadow: 0px 0px 4px #000 inset;
+			  	 
+			}
+			#box1{
+				position: relative;
+				width: 20px;
+				display: block;
+				color: wheat;
+				left: 20px;
+				top: 40px;
+				font-size: larger;
+				font-weight: bolder;
+			border-radius:15px ;
+				/*font-size: 12px;*/
+			}
+			#box2{
+				position: relative;
+				width: 20px;
+				display: block;
+				color: wheat;
+				left: 20px;
+				top: 44px;
+font-size: larger;
+				font-weight: bolder;			}
+			#submit{
+				position: absolute;
+				margin-top: 20px;
+				margin-left: 250px;
+	        	box-shadow:0 0 20px gold;
+			}
+			.menu-content {
+				width: 100%;
+				min-height: 10px;
+				color: white;
+				border: solid 1px cyan;
+			}
+			
+			.menu-item{
+				display: inline-block;
+				background-color: cadetblue;
+				margin-right: 100px;
+				
+			}
+			.menu-item:first-child{
+				margin-left: 100px;
+			}
+			.menu-item a{
+				background-color: cadetblue;
+				color: cadetblue;	
+				text-decoration: none;
+			}
+			h1{
+				position: absolute;
+				width: 300px;
+				color: wheat;
+				left: 550px;
+				text-align: center;
+			}
+			.content-flag1{
+				z-index: 200;
+				background: cadetblue;
+				position: absolute;
+				width: 150px;
+				margin-left: 420px;
+				color: wheat;
+				border: solid 1px cadetblue;
+				display: none;	
+			}
+			.content-flag2{
+				z-index: 200;
+				background: cadetblue;
+				position: absolute;
+				width: 150px;
+				margin-left: 1090px;
+				color: wheat;
+				border: solid 1px cadetblue;
+				display: none;	
+			}
+			.sub-row span{
+				display: block;
+			}
+			.menu-item a:hover{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+		<div class="menu-content" id="menu-content">
+				<div class="menu-item">
+					<a href="">
+						<span>大同文教首页</span>
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="">
+						<span>我的DT</span>
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="" id="alert1">
+						<span>DT宗旨</span>
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="">
+						<span>安全中心</span>
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="">
+						<span>网站导航</span>
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="">
+						<span>网站导航</span>
+					</a>
+				</div>
+				<div class="menu-item" id="alert2">
+					<a href="">
+						<span>返回首页</span>
+					</a>
+				</div>
+			</div>
+			<!--宗旨-->	
+		<div class="content-flag1">
+				<div class="title">DT宗旨</div>
+						<div class="sub-row">
+							<span>我们的宗旨</span>
+							<span>我们的宗旨</span>
+							<span>我们的宗旨</span>
+							<span>我们的宗旨</span>
+						</div>
+		</div>
+		<div class="content-flag2">
+				<div class="title">返回</div>
+						<div class="sub-row">
+							<span>这里多好的，干嘛要返回呢？</span>
+						</div>
+		</div>
+		<form id="shine">
+			<h1>注册界面</h1>
+			<div id="box1">Email</div>
+			<input type="text" id="" required placeholder="email" />
+			<div id="box2">Password</div>
+			<input type="password" id="" required placeholder="password" />
+			<input type="button" id="submit" value="submit" />
+		</form>
+		</div>
+		
+		<script type="text/javascript">
+			//
+			var oAlert1=document.getElementById("alert1");
+			var oFlag1=document.getElementsByClassName("content-flag1")[0];
+			oAlert1.onmouseover=function(){
+				oFlag1.style.display="block";
+			}
+			oAlert1.onmouseout=function(){
+				oFlag1.style.display="none";
+			}
+			var oAlert2=document.getElementById("alert2");
+			var oFlag2=document.getElementsByClassName("content-flag2")[0];
+			oAlert2.onmouseover=function(){
+				oFlag2.style.display="block";
+			}
+			oAlert2.onmouseout=function(){
+				oFlag2.style.display="none";
+			}
+			var oShine=document.getElementById("shine"),
+				index=0,//定义索引变量
+				color=["red","yellow","green",'#08BECE',
+	        	'yellowgreen','#4DAF7C','#8A2BE2'],//设置名为颜色的数组，存放需要改变的颜色名
+				timer;//该变量用于清除延时效果，此处不用，但有备无患嘛
+			function changeColor(){//定义变色函数，初级代码，故只改变边框颜色
+				oShine.style.borderColor=color[index];
+			}
+			timer=setInterval(function(){
+				index++;
+				if (index>7) {
+					index=0;
+				}//只有三种颜色，所以当索引大于3时，index归0
+				changeColor();
+			},100)//利用延时函数，设置每隔x秒颜色变化一次
+		</script>
+	</body>
+</html>
