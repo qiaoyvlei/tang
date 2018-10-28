@@ -92,8 +92,12 @@
 			#input3 {
 				width: 400px;
 				height: 100px;
-			}
 
+			}
+			#but{
+				cursor: pointer;
+				
+			}
 		</style>
 	</head>
 
@@ -110,6 +114,23 @@
 			</div>
 
 		</form>
+		<script type="text/javascript">
+			var oEmail=document.getElementById("email");
+			oEmail.onclick=function(){
+				oEmail.style.borderColor="blue";
+				oPass.style.borderColor=" gainsboro";/*点击框1时给框2取消变色*/
+			}
+			var oPass=document.getElementById("password");
+			oPass.onclick=function(){
+				oPass.style.borderColor="blue";
+				oEmail.style.borderColor=" gainsboro";/*点击框2时给框1取消变色*/
+			}
+			var oPass=document.getElementById("password");
+			oPass.onclick=function(){
+				oPass.style.borderColor=" gainsboro";/*点击框1时给框2取消变色*/
+			}
+			
+		</script>
 	</body>
 
 </html>
