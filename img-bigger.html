@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定义元素尺寸大小</title>
+		<style type="text/css">
+			#resize{
+				margin:200px auto;
+				background: url(v领蓝色.jpg) no-repeat center;
+				background-size: cover;
+				background-clip: content-box;	
+				/*设计背景图像仅在内容区域显示,留出补白区域*/
+				width: 200px;
+				height: 220px;
+				max-height: 1000px;
+				max-width: 1000px;
+				padding: 6px;
+				resize: both;
+				border:px solid;
+				overflow: auto;
+				outline:#003300 solid 20px;
+				outline-offset: 20px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="resize">
+			鼠标拖移以拉大图形
+		</div>
+	</body>
+</html>
