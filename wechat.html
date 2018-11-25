@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>微信logo</title>
+		<style type="text/css">
+			.back {
+				width: 400px;
+				height: 400px;
+				background: #08c406;
+				border-radius: 12px;
+				margin: 100px auto;
+			}
+			
+			.back::before {
+				content: "";
+				position: absolute;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background-color: #08c406;
+				top: 310px;
+				left: 665px;
+				z-index: 2;
+				box-shadow: 90px 0 #08c406, -90px -50px 0 2px #08c406, 0 -50px 0 2px #08c406;
+			}
+			
+			.bigone {
+				width: 200px;
+				height: 150px;
+				border-radius: 50%;
+				background-color: #FFFFFF;
+				position: absolute;
+				top: 200px;
+				left: 535px;
+			}
+			
+			.bigone::before {
+				content: "";
+				width: 150px;
+				height: 120px;
+				border-radius: 50%;
+				background-color: #fff;
+				position: absolute;
+				top: 70px;
+				left: 110px;
+				border: 2px solid #08c406;
+			}
+			
+		
+			.back::after {
+				content: "";
+				border-width: 30px 12px;
+				border-style: solid;
+				border-color: #fff transparent transparent transparent;
+				position: absolute;
+				top: 310px;
+				left: 530px;
+				transform: rotate(55deg);
+			}
+			
+			.bigone::after {
+				content: "";
+				border-width: 30px 10px;
+				border-style: solid;
+				border-color: #fff transparent transparent transparent;
+				position: absolute;
+				top: 155px;
+				left: 250px;
+				transform: rotate(-45deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="back">
+			<div class="bigone">
+			</div>
+		</div>
+	</body>
+
+</html>
